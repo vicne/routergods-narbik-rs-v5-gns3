@@ -7,11 +7,14 @@ Foundation Volume 1 (Feb 2015) - Completed, tested
 Foundation Volume 2 (Feb 2015) - Completed, tested
 Advanced Routing and Switching Volume 1 (Feb 2015) - Completed, tested
 Advanced Routing and Switching Volume 2 (Feb 2015) - Completed, tested
-Advanced Routing and Switching Volume 3 (Mar 2015) - Mostly complete
+Advanced Routing and Switching Volume 3 (Mar 2015) - Completed
 Advanced Routing and Switching Volume 4 (Feb 2015) - Mostly complete
 
 ------------------------------------
 Change Log
+
+March 29, 2016
+ADV RS Vol 2 - Updated MPLS Lab 10, missing serial link between R1 and R3
 
 Jan 17, 2016
 ADV RS Vol 1-3 updated for GNS3 1.4 and 7200 M9 IOS.. QOS section still needs population

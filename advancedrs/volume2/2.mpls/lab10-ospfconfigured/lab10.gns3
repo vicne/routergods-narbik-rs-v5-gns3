@@ -52,6 +52,14 @@
                 "id": 6,
                 "source_node_id": 5,
                 "source_port_id": 10
+            },
+            {
+                "description": "Link from R1 port Serial1/3 to R3 port Serial1/1",
+                "destination_node_id": 3,
+                "destination_port_id": 48,
+                "id": 7,
+                "source_node_id": 1,
+                "source_port_id": 58
             }
         ],
         "nodes": [
@@ -96,8 +104,11 @@
                     },
                     {
                         "adapter_number": 1,
+                        "description": "connected to R3 on port Serial1/1",
                         "id": 58,
+                        "link_id": 7,
                         "name": "Serial1/3",
+                        "nio": "NIO_UDP",
                         "port_number": 3
                     }
                 ],
@@ -286,8 +297,11 @@
                     },
                     {
                         "adapter_number": 1,
+                        "description": "connected to R1 on port Serial1/3",
                         "id": 48,
+                        "link_id": 7,
                         "name": "Serial1/1",
+                        "nio": "NIO_UDP",
                         "port_number": 1
                     },
                     {

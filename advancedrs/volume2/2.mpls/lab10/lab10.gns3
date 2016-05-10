@@ -6,20 +6,20 @@
     "topology": {
         "links": [
             {
-                "description": "Link from R4 port Serial1/5 to R5 port Serial1/4",
-                "destination_node_id": 5,
-                "destination_port_id": 19,
-                "id": 1,
-                "source_node_id": 4,
-                "source_port_id": 28
-            },
-            {
                 "description": "Link from R1 port FastEthernet0/0 to R3 port FastEthernet0/0",
                 "destination_node_id": 3,
                 "destination_port_id": 6,
-                "id": 2,
+                "id": 1,
                 "source_node_id": 1,
                 "source_port_id": 2
+            },
+            {
+                "description": "Link from R4 port Serial1/5 to R5 port Serial1/4",
+                "destination_node_id": 5,
+                "destination_port_id": 19,
+                "id": 2,
+                "source_node_id": 4,
+                "source_port_id": 28
             },
             {
                 "description": "Link from R3 port Serial1/4 to R4 port Serial1/3",
@@ -52,6 +52,14 @@
                 "id": 6,
                 "source_node_id": 5,
                 "source_port_id": 10
+            },
+            {
+                "description": "Link from R1 port Serial1/3 to R3 port Serial1/1",
+                "destination_node_id": 3,
+                "destination_port_id": 48,
+                "id": 7,
+                "source_node_id": 1,
+                "source_port_id": 58
             }
         ],
         "nodes": [
@@ -67,15 +75,6 @@
                     "y": -25.0
                 },
                 "ports": [
-                    {
-                        "adapter_number": 0,
-                        "description": "connected to R3 on port FastEthernet0/0",
-                        "id": 2,
-                        "link_id": 2,
-                        "name": "FastEthernet0/0",
-                        "nio": "NIO_UDP",
-                        "port_number": 0
-                    },
                     {
                         "adapter_number": 1,
                         "id": 55,
@@ -96,9 +95,21 @@
                     },
                     {
                         "adapter_number": 1,
+                        "description": "connected to R3 on port Serial1/1",
                         "id": 58,
+                        "link_id": 7,
                         "name": "Serial1/3",
+                        "nio": "NIO_UDP",
                         "port_number": 3
+                    },
+                    {
+                        "adapter_number": 0,
+                        "description": "connected to R3 on port FastEthernet0/0",
+                        "id": 2,
+                        "link_id": 1,
+                        "name": "FastEthernet0/0",
+                        "nio": "NIO_UDP",
+                        "port_number": 0
                     }
                 ],
                 "properties": {
@@ -157,12 +168,6 @@
                 },
                 "ports": [
                     {
-                        "adapter_number": 0,
-                        "id": 4,
-                        "name": "FastEthernet0/0",
-                        "port_number": 0
-                    },
-                    {
                         "adapter_number": 1,
                         "id": 39,
                         "name": "Serial1/0",
@@ -212,6 +217,12 @@
                         "id": 46,
                         "name": "Serial1/7",
                         "port_number": 7
+                    },
+                    {
+                        "adapter_number": 0,
+                        "id": 4,
+                        "name": "FastEthernet0/0",
+                        "port_number": 0
                     }
                 ],
                 "properties": {
@@ -270,15 +281,6 @@
                 },
                 "ports": [
                     {
-                        "adapter_number": 0,
-                        "description": "connected to R1 on port FastEthernet0/0",
-                        "id": 6,
-                        "link_id": 2,
-                        "name": "FastEthernet0/0",
-                        "nio": "NIO_UDP",
-                        "port_number": 0
-                    },
-                    {
                         "adapter_number": 1,
                         "id": 47,
                         "name": "Serial1/0",
@@ -286,8 +288,11 @@
                     },
                     {
                         "adapter_number": 1,
+                        "description": "connected to R1 on port Serial1/3",
                         "id": 48,
+                        "link_id": 7,
                         "name": "Serial1/1",
+                        "nio": "NIO_UDP",
                         "port_number": 1
                     },
                     {
@@ -328,6 +333,15 @@
                         "id": 54,
                         "name": "Serial1/7",
                         "port_number": 7
+                    },
+                    {
+                        "adapter_number": 0,
+                        "description": "connected to R1 on port FastEthernet0/0",
+                        "id": 6,
+                        "link_id": 1,
+                        "name": "FastEthernet0/0",
+                        "nio": "NIO_UDP",
+                        "port_number": 0
                     }
                 ],
                 "properties": {
@@ -386,12 +400,6 @@
                 },
                 "ports": [
                     {
-                        "adapter_number": 0,
-                        "id": 8,
-                        "name": "FastEthernet0/0",
-                        "port_number": 0
-                    },
-                    {
                         "adapter_number": 1,
                         "id": 23,
                         "name": "Serial1/0",
@@ -428,7 +436,7 @@
                         "adapter_number": 1,
                         "description": "connected to R5 on port Serial1/4",
                         "id": 28,
-                        "link_id": 1,
+                        "link_id": 2,
                         "name": "Serial1/5",
                         "nio": "NIO_UDP",
                         "port_number": 5
@@ -447,6 +455,12 @@
                         "id": 30,
                         "name": "Serial1/7",
                         "port_number": 7
+                    },
+                    {
+                        "adapter_number": 0,
+                        "id": 8,
+                        "name": "FastEthernet0/0",
+                        "port_number": 0
                     }
                 ],
                 "properties": {
@@ -505,15 +519,6 @@
                 },
                 "ports": [
                     {
-                        "adapter_number": 0,
-                        "description": "connected to R7 on port FastEthernet0/0",
-                        "id": 10,
-                        "link_id": 6,
-                        "name": "FastEthernet0/0",
-                        "nio": "NIO_UDP",
-                        "port_number": 0
-                    },
-                    {
                         "adapter_number": 1,
                         "id": 15,
                         "name": "Serial1/0",
@@ -541,7 +546,7 @@
                         "adapter_number": 1,
                         "description": "connected to R4 on port Serial1/5",
                         "id": 19,
-                        "link_id": 1,
+                        "link_id": 2,
                         "name": "Serial1/4",
                         "nio": "NIO_UDP",
                         "port_number": 4
@@ -563,6 +568,15 @@
                         "id": 22,
                         "name": "Serial1/7",
                         "port_number": 7
+                    },
+                    {
+                        "adapter_number": 0,
+                        "description": "connected to R7 on port FastEthernet0/0",
+                        "id": 10,
+                        "link_id": 6,
+                        "name": "FastEthernet0/0",
+                        "nio": "NIO_UDP",
+                        "port_number": 0
                     }
                 ],
                 "properties": {
@@ -621,12 +635,6 @@
                 },
                 "ports": [
                     {
-                        "adapter_number": 0,
-                        "id": 12,
-                        "name": "FastEthernet0/0",
-                        "port_number": 0
-                    },
-                    {
                         "adapter_number": 1,
                         "id": 31,
                         "name": "Serial1/0",
@@ -679,6 +687,12 @@
                         "id": 38,
                         "name": "Serial1/7",
                         "port_number": 7
+                    },
+                    {
+                        "adapter_number": 0,
+                        "id": 12,
+                        "name": "FastEthernet0/0",
+                        "port_number": 0
                     }
                 ],
                 "properties": {
@@ -737,18 +751,18 @@
                 },
                 "ports": [
                     {
+                        "adapter_number": 1,
+                        "id": 13,
+                        "name": "FastEthernet1/0",
+                        "port_number": 0
+                    },
+                    {
                         "adapter_number": 0,
                         "description": "connected to R5 on port FastEthernet0/0",
                         "id": 14,
                         "link_id": 6,
                         "name": "FastEthernet0/0",
                         "nio": "NIO_UDP",
-                        "port_number": 0
-                    },
-                    {
-                        "adapter_number": 1,
-                        "id": 13,
-                        "name": "FastEthernet1/0",
                         "port_number": 0
                     }
                 ],
