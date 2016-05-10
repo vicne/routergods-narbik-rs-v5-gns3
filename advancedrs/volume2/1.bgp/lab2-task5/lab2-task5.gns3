@@ -1,0 +1,755 @@
+{
+    "auto_start": false,
+    "name": "lab2-task5",
+    "project_id": "a887a5e3-1bbd-417b-8b8d-763c4b827dee",
+    "revision": 4,
+    "topology": {
+        "links": [
+            {
+                "description": "Link from R5 port Serial1/4 to R4 port Serial1/5",
+                "destination_node_id": 4,
+                "destination_port_id": 42,
+                "id": 1,
+                "source_node_id": 5,
+                "source_port_id": 49
+            },
+            {
+                "description": "Link from R1 port Serial1/2 to R2 port Serial1/1",
+                "destination_node_id": 2,
+                "destination_port_id": 22,
+                "id": 2,
+                "source_node_id": 1,
+                "source_port_id": 15
+            },
+            {
+                "description": "Link from R3 port Serial1/1 to R1 port Serial1/3",
+                "destination_node_id": 1,
+                "destination_port_id": 16,
+                "id": 3,
+                "source_node_id": 3,
+                "source_port_id": 30
+            },
+            {
+                "description": "Link from R1 port Serial1/4 to R4 port Serial1/1",
+                "destination_node_id": 4,
+                "destination_port_id": 38,
+                "id": 4,
+                "source_node_id": 1,
+                "source_port_id": 17
+            },
+            {
+                "description": "Link from R6 port Serial1/4 to R4 port Serial1/6",
+                "destination_node_id": 4,
+                "destination_port_id": 43,
+                "id": 5,
+                "source_node_id": 6,
+                "source_port_id": 57
+            }
+        ],
+        "nodes": [
+            {
+                "description": "Router c7200",
+                "dynamips_id": 1,
+                "id": 1,
+                "label": {
+                    "color": "#ff000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "R1",
+                    "x": 20.5,
+                    "y": -25.0
+                },
+                "ports": [
+                    {
+                        "adapter_number": 0,
+                        "id": 2,
+                        "name": "FastEthernet0/0",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 1,
+                        "id": 13,
+                        "name": "Serial1/0",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 1,
+                        "id": 14,
+                        "name": "Serial1/1",
+                        "port_number": 1
+                    },
+                    {
+                        "adapter_number": 1,
+                        "description": "connected to R2 on port Serial1/1",
+                        "id": 15,
+                        "link_id": 2,
+                        "name": "Serial1/2",
+                        "nio": "NIO_UDP",
+                        "port_number": 2
+                    },
+                    {
+                        "adapter_number": 1,
+                        "description": "connected to R3 on port Serial1/1",
+                        "id": 16,
+                        "link_id": 3,
+                        "name": "Serial1/3",
+                        "nio": "NIO_UDP",
+                        "port_number": 3
+                    },
+                    {
+                        "adapter_number": 1,
+                        "description": "connected to R4 on port Serial1/1",
+                        "id": 17,
+                        "link_id": 4,
+                        "name": "Serial1/4",
+                        "nio": "NIO_UDP",
+                        "port_number": 4
+                    },
+                    {
+                        "adapter_number": 1,
+                        "id": 18,
+                        "name": "Serial1/5",
+                        "port_number": 5
+                    },
+                    {
+                        "adapter_number": 1,
+                        "id": 19,
+                        "name": "Serial1/6",
+                        "port_number": 6
+                    },
+                    {
+                        "adapter_number": 1,
+                        "id": 20,
+                        "name": "Serial1/7",
+                        "port_number": 7
+                    }
+                ],
+                "properties": {
+                    "auto_delete_disks": false,
+                    "clock_divisor": 4,
+                    "console": 2001,
+                    "disk0": 0,
+                    "disk1": 0,
+                    "exec_area": 16,
+                    "idlemax": 500,
+                    "idlepc": "0x6062ed68",
+                    "idlesleep": 30,
+                    "image": "c7200-adventerprisek9-mz.152-4.M9.image",
+                    "image_md5sum": "470c4b957a0f7f26cfda9c8eb3eab6d3",
+                    "mac_addr": "ca01.1b84.0000",
+                    "midplane": "vxr",
+                    "mmap": true,
+                    "name": "R1",
+                    "npe": "npe-400",
+                    "nvram": 512,
+                    "platform": "c7200",
+                    "power_supplies": [
+                        1,
+                        1
+                    ],
+                    "private_config": "configs/i1_private-config.cfg",
+                    "ram": 512,
+                    "sensors": [
+                        22,
+                        22,
+                        22,
+                        22
+                    ],
+                    "slot0": "C7200-IO-FE",
+                    "slot1": "PA-8T",
+                    "sparsemem": true,
+                    "startup_config": "configs/i1_startup-config.cfg",
+                    "system_id": "FTX0945W0MY"
+                },
+                "server_id": 1,
+                "type": "C7200",
+                "vm_id": "59af639d-97cd-44f1-9555-520c597cfe4b",
+                "x": -720.0,
+                "y": -248.0
+            },
+            {
+                "description": "Router c7200",
+                "dynamips_id": 2,
+                "id": 2,
+                "label": {
+                    "color": "#ff000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "R2",
+                    "x": 20.5,
+                    "y": -25.0
+                },
+                "ports": [
+                    {
+                        "adapter_number": 0,
+                        "id": 4,
+                        "name": "FastEthernet0/0",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 1,
+                        "id": 21,
+                        "name": "Serial1/0",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 1,
+                        "description": "connected to R1 on port Serial1/2",
+                        "id": 22,
+                        "link_id": 2,
+                        "name": "Serial1/1",
+                        "nio": "NIO_UDP",
+                        "port_number": 1
+                    },
+                    {
+                        "adapter_number": 1,
+                        "id": 23,
+                        "name": "Serial1/2",
+                        "port_number": 2
+                    },
+                    {
+                        "adapter_number": 1,
+                        "id": 24,
+                        "name": "Serial1/3",
+                        "port_number": 3
+                    },
+                    {
+                        "adapter_number": 1,
+                        "id": 25,
+                        "name": "Serial1/4",
+                        "port_number": 4
+                    },
+                    {
+                        "adapter_number": 1,
+                        "id": 26,
+                        "name": "Serial1/5",
+                        "port_number": 5
+                    },
+                    {
+                        "adapter_number": 1,
+                        "id": 27,
+                        "name": "Serial1/6",
+                        "port_number": 6
+                    },
+                    {
+                        "adapter_number": 1,
+                        "id": 28,
+                        "name": "Serial1/7",
+                        "port_number": 7
+                    }
+                ],
+                "properties": {
+                    "auto_delete_disks": false,
+                    "clock_divisor": 4,
+                    "console": 2002,
+                    "disk0": 0,
+                    "disk1": 0,
+                    "exec_area": 16,
+                    "idlemax": 500,
+                    "idlepc": "0x6062ed68",
+                    "idlesleep": 30,
+                    "image": "c7200-adventerprisek9-mz.152-4.M9.image",
+                    "image_md5sum": "470c4b957a0f7f26cfda9c8eb3eab6d3",
+                    "mac_addr": "ca02.2208.0000",
+                    "midplane": "vxr",
+                    "mmap": true,
+                    "name": "R2",
+                    "npe": "npe-400",
+                    "nvram": 512,
+                    "platform": "c7200",
+                    "power_supplies": [
+                        1,
+                        1
+                    ],
+                    "private_config": "configs/i2_private-config.cfg",
+                    "ram": 512,
+                    "sensors": [
+                        22,
+                        22,
+                        22,
+                        22
+                    ],
+                    "slot0": "C7200-IO-FE",
+                    "slot1": "PA-8T",
+                    "sparsemem": true,
+                    "startup_config": "configs/i2_startup-config.cfg",
+                    "system_id": "FTX0945W0MY"
+                },
+                "server_id": 1,
+                "type": "C7200",
+                "vm_id": "2c108bf5-60c5-418e-b758-b1015c31f2f3",
+                "x": -786.0,
+                "y": 33.0
+            },
+            {
+                "description": "Router c7200",
+                "dynamips_id": 3,
+                "id": 3,
+                "label": {
+                    "color": "#ff000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "R3",
+                    "x": 20.5,
+                    "y": -25.0
+                },
+                "ports": [
+                    {
+                        "adapter_number": 0,
+                        "id": 6,
+                        "name": "FastEthernet0/0",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 1,
+                        "id": 29,
+                        "name": "Serial1/0",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 1,
+                        "description": "connected to R1 on port Serial1/3",
+                        "id": 30,
+                        "link_id": 3,
+                        "name": "Serial1/1",
+                        "nio": "NIO_UDP",
+                        "port_number": 1
+                    },
+                    {
+                        "adapter_number": 1,
+                        "id": 31,
+                        "name": "Serial1/2",
+                        "port_number": 2
+                    },
+                    {
+                        "adapter_number": 1,
+                        "id": 32,
+                        "name": "Serial1/3",
+                        "port_number": 3
+                    },
+                    {
+                        "adapter_number": 1,
+                        "id": 33,
+                        "name": "Serial1/4",
+                        "port_number": 4
+                    },
+                    {
+                        "adapter_number": 1,
+                        "id": 34,
+                        "name": "Serial1/5",
+                        "port_number": 5
+                    },
+                    {
+                        "adapter_number": 1,
+                        "id": 35,
+                        "name": "Serial1/6",
+                        "port_number": 6
+                    },
+                    {
+                        "adapter_number": 1,
+                        "id": 36,
+                        "name": "Serial1/7",
+                        "port_number": 7
+                    }
+                ],
+                "properties": {
+                    "auto_delete_disks": false,
+                    "clock_divisor": 4,
+                    "console": 2003,
+                    "disk0": 0,
+                    "disk1": 0,
+                    "exec_area": 16,
+                    "idlemax": 500,
+                    "idlepc": "0x6062ed68",
+                    "idlesleep": 30,
+                    "image": "c7200-adventerprisek9-mz.152-4.M9.image",
+                    "image_md5sum": "470c4b957a0f7f26cfda9c8eb3eab6d3",
+                    "mac_addr": "ca03.0b64.0000",
+                    "midplane": "vxr",
+                    "mmap": true,
+                    "name": "R3",
+                    "npe": "npe-400",
+                    "nvram": 512,
+                    "platform": "c7200",
+                    "power_supplies": [
+                        1,
+                        1
+                    ],
+                    "private_config": "configs/i3_private-config.cfg",
+                    "ram": 512,
+                    "sensors": [
+                        22,
+                        22,
+                        22,
+                        22
+                    ],
+                    "slot0": "C7200-IO-FE",
+                    "slot1": "PA-8T",
+                    "sparsemem": true,
+                    "startup_config": "configs/i3_startup-config.cfg",
+                    "system_id": "FTX0945W0MY"
+                },
+                "server_id": 1,
+                "type": "C7200",
+                "vm_id": "8a183c96-6414-438f-ab98-14012999fdd0",
+                "x": -569.0,
+                "y": 43.0
+            },
+            {
+                "description": "Router c7200",
+                "dynamips_id": 4,
+                "id": 4,
+                "label": {
+                    "color": "#ff000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "R4",
+                    "x": 20.5,
+                    "y": -25.0
+                },
+                "ports": [
+                    {
+                        "adapter_number": 0,
+                        "id": 8,
+                        "name": "FastEthernet0/0",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 1,
+                        "id": 37,
+                        "name": "Serial1/0",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 1,
+                        "description": "connected to R1 on port Serial1/4",
+                        "id": 38,
+                        "link_id": 4,
+                        "name": "Serial1/1",
+                        "nio": "NIO_UDP",
+                        "port_number": 1
+                    },
+                    {
+                        "adapter_number": 1,
+                        "id": 39,
+                        "name": "Serial1/2",
+                        "port_number": 2
+                    },
+                    {
+                        "adapter_number": 1,
+                        "id": 40,
+                        "name": "Serial1/3",
+                        "port_number": 3
+                    },
+                    {
+                        "adapter_number": 1,
+                        "id": 41,
+                        "name": "Serial1/4",
+                        "port_number": 4
+                    },
+                    {
+                        "adapter_number": 1,
+                        "description": "connected to R5 on port Serial1/4",
+                        "id": 42,
+                        "link_id": 1,
+                        "name": "Serial1/5",
+                        "nio": "NIO_UDP",
+                        "port_number": 5
+                    },
+                    {
+                        "adapter_number": 1,
+                        "description": "connected to R6 on port Serial1/4",
+                        "id": 43,
+                        "link_id": 5,
+                        "name": "Serial1/6",
+                        "nio": "NIO_UDP",
+                        "port_number": 6
+                    },
+                    {
+                        "adapter_number": 1,
+                        "id": 44,
+                        "name": "Serial1/7",
+                        "port_number": 7
+                    }
+                ],
+                "properties": {
+                    "auto_delete_disks": false,
+                    "clock_divisor": 4,
+                    "console": 2004,
+                    "disk0": 0,
+                    "disk1": 0,
+                    "exec_area": 16,
+                    "idlemax": 500,
+                    "idlepc": "0x6062ed68",
+                    "idlesleep": 30,
+                    "image": "c7200-adventerprisek9-mz.152-4.M9.image",
+                    "image_md5sum": "470c4b957a0f7f26cfda9c8eb3eab6d3",
+                    "mac_addr": "ca04.15e8.0000",
+                    "midplane": "vxr",
+                    "mmap": true,
+                    "name": "R4",
+                    "npe": "npe-400",
+                    "nvram": 512,
+                    "platform": "c7200",
+                    "power_supplies": [
+                        1,
+                        1
+                    ],
+                    "private_config": "configs/i4_private-config.cfg",
+                    "ram": 512,
+                    "sensors": [
+                        22,
+                        22,
+                        22,
+                        22
+                    ],
+                    "slot0": "C7200-IO-FE",
+                    "slot1": "PA-8T",
+                    "sparsemem": true,
+                    "startup_config": "configs/i4_startup-config.cfg",
+                    "system_id": "FTX0945W0MY"
+                },
+                "server_id": 1,
+                "type": "C7200",
+                "vm_id": "f3d715d3-8ed3-44be-9aa0-f7a773ce9eb7",
+                "x": 121.0,
+                "y": -221.0
+            },
+            {
+                "description": "Router c7200",
+                "dynamips_id": 5,
+                "id": 5,
+                "label": {
+                    "color": "#ff000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "R5",
+                    "x": 20.5,
+                    "y": -25.0
+                },
+                "ports": [
+                    {
+                        "adapter_number": 0,
+                        "id": 10,
+                        "name": "FastEthernet0/0",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 1,
+                        "id": 45,
+                        "name": "Serial1/0",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 1,
+                        "id": 46,
+                        "name": "Serial1/1",
+                        "port_number": 1
+                    },
+                    {
+                        "adapter_number": 1,
+                        "id": 47,
+                        "name": "Serial1/2",
+                        "port_number": 2
+                    },
+                    {
+                        "adapter_number": 1,
+                        "id": 48,
+                        "name": "Serial1/3",
+                        "port_number": 3
+                    },
+                    {
+                        "adapter_number": 1,
+                        "description": "connected to R4 on port Serial1/5",
+                        "id": 49,
+                        "link_id": 1,
+                        "name": "Serial1/4",
+                        "nio": "NIO_UDP",
+                        "port_number": 4
+                    },
+                    {
+                        "adapter_number": 1,
+                        "id": 50,
+                        "name": "Serial1/5",
+                        "port_number": 5
+                    },
+                    {
+                        "adapter_number": 1,
+                        "id": 51,
+                        "name": "Serial1/6",
+                        "port_number": 6
+                    },
+                    {
+                        "adapter_number": 1,
+                        "id": 52,
+                        "name": "Serial1/7",
+                        "port_number": 7
+                    }
+                ],
+                "properties": {
+                    "auto_delete_disks": false,
+                    "clock_divisor": 4,
+                    "console": 2005,
+                    "disk0": 0,
+                    "disk1": 0,
+                    "exec_area": 16,
+                    "idlemax": 500,
+                    "idlepc": "0x6062ed68",
+                    "idlesleep": 30,
+                    "image": "c7200-adventerprisek9-mz.152-4.M9.image",
+                    "image_md5sum": "470c4b957a0f7f26cfda9c8eb3eab6d3",
+                    "mac_addr": "ca05.2074.0000",
+                    "midplane": "vxr",
+                    "mmap": true,
+                    "name": "R5",
+                    "npe": "npe-400",
+                    "nvram": 512,
+                    "platform": "c7200",
+                    "power_supplies": [
+                        1,
+                        1
+                    ],
+                    "private_config": "configs/i5_private-config.cfg",
+                    "ram": 512,
+                    "sensors": [
+                        22,
+                        22,
+                        22,
+                        22
+                    ],
+                    "slot0": "C7200-IO-FE",
+                    "slot1": "PA-8T",
+                    "sparsemem": true,
+                    "startup_config": "configs/i5_startup-config.cfg",
+                    "system_id": "FTX0945W0MY"
+                },
+                "server_id": 1,
+                "type": "C7200",
+                "vm_id": "40ccc2dc-4ecf-4348-be93-fab0fe6af937",
+                "x": -66.0,
+                "y": 89.0
+            },
+            {
+                "description": "Router c7200",
+                "dynamips_id": 6,
+                "id": 6,
+                "label": {
+                    "color": "#ff000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "R6",
+                    "x": 20.5,
+                    "y": -25.0
+                },
+                "ports": [
+                    {
+                        "adapter_number": 0,
+                        "id": 12,
+                        "name": "FastEthernet0/0",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 1,
+                        "id": 53,
+                        "name": "Serial1/0",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 1,
+                        "id": 54,
+                        "name": "Serial1/1",
+                        "port_number": 1
+                    },
+                    {
+                        "adapter_number": 1,
+                        "id": 55,
+                        "name": "Serial1/2",
+                        "port_number": 2
+                    },
+                    {
+                        "adapter_number": 1,
+                        "id": 56,
+                        "name": "Serial1/3",
+                        "port_number": 3
+                    },
+                    {
+                        "adapter_number": 1,
+                        "description": "connected to R4 on port Serial1/6",
+                        "id": 57,
+                        "link_id": 5,
+                        "name": "Serial1/4",
+                        "nio": "NIO_UDP",
+                        "port_number": 4
+                    },
+                    {
+                        "adapter_number": 1,
+                        "id": 58,
+                        "name": "Serial1/5",
+                        "port_number": 5
+                    },
+                    {
+                        "adapter_number": 1,
+                        "id": 59,
+                        "name": "Serial1/6",
+                        "port_number": 6
+                    },
+                    {
+                        "adapter_number": 1,
+                        "id": 60,
+                        "name": "Serial1/7",
+                        "port_number": 7
+                    }
+                ],
+                "properties": {
+                    "auto_delete_disks": false,
+                    "clock_divisor": 4,
+                    "console": 2006,
+                    "disk0": 0,
+                    "disk1": 0,
+                    "exec_area": 16,
+                    "idlemax": 500,
+                    "idlepc": "0x6062ed68",
+                    "idlesleep": 30,
+                    "image": "c7200-adventerprisek9-mz.152-4.M9.image",
+                    "image_md5sum": "470c4b957a0f7f26cfda9c8eb3eab6d3",
+                    "mac_addr": "ca06.01a0.0000",
+                    "midplane": "vxr",
+                    "mmap": true,
+                    "name": "R6",
+                    "npe": "npe-400",
+                    "nvram": 512,
+                    "platform": "c7200",
+                    "power_supplies": [
+                        1,
+                        1
+                    ],
+                    "private_config": "configs/i6_private-config.cfg",
+                    "ram": 512,
+                    "sensors": [
+                        22,
+                        22,
+                        22,
+                        22
+                    ],
+                    "slot0": "C7200-IO-FE",
+                    "slot1": "PA-8T",
+                    "sparsemem": true,
+                    "startup_config": "configs/i6_startup-config.cfg",
+                    "system_id": "FTX0945W0MY"
+                },
+                "server_id": 1,
+                "type": "C7200",
+                "vm_id": "b0bcf947-c45e-48e7-8a35-2ddb2d2a4b94",
+                "x": 354.0,
+                "y": 77.0
+            }
+        ],
+        "servers": [
+            {
+                "host": "127.0.0.1",
+                "id": 1,
+                "local": true,
+                "port": 8000,
+                "protocol": "http",
+                "ram_limit": 0,
+                "vm": false
+            }
+        ]
+    },
+    "type": "topology",
+    "version": "1.4.0"
+}

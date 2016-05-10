@@ -1,0 +1,10 @@
+# Try to ingore the extraneous runtime files. To remove them before a commit, 
+# run the following command:
+#  find . -type f | grep project-files/dynamips | grep -v config.cfg | xargs rm
+#
+**/project-files/dynamips/*
+!**/project-files/dynamips/configs
+**/project-files/dynamips/configs/*
+!**/project-files/dynamips/configs/*_private-config.cfg
+!**/project-files/dynamips/configs/*_startup-config.cfg
+

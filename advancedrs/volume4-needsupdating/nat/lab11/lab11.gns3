@@ -1,0 +1,447 @@
+{
+    "auto_start": false,
+    "name": "lab11",
+    "project_id": "633d4818-5a78-4102-b744-7c89d2a07224",
+    "resources_type": "local",
+    "revision": 3,
+    "topology": {
+        "links": [
+            {
+                "description": "Link from R1 port FastEthernet0/0 to SW1 port 1",
+                "destination_node_id": 5,
+                "destination_port_id": 25,
+                "id": 1,
+                "source_node_id": 1,
+                "source_port_id": 5
+            },
+            {
+                "description": "Link from R2 port FastEthernet0/0 to SW1 port 2",
+                "destination_node_id": 5,
+                "destination_port_id": 26,
+                "id": 2,
+                "source_node_id": 2,
+                "source_port_id": 11
+            },
+            {
+                "description": "Link from R3 port FastEthernet0/0 to SW1 port 3",
+                "destination_node_id": 5,
+                "destination_port_id": 27,
+                "id": 3,
+                "source_node_id": 3,
+                "source_port_id": 17
+            },
+            {
+                "description": "Link from R2 port FastEthernet0/1 to SW1 port 22",
+                "destination_node_id": 5,
+                "destination_port_id": 33,
+                "id": 4,
+                "source_node_id": 2,
+                "source_port_id": 12
+            },
+            {
+                "description": "Link from SW1 port 33 to R3 port FastEthernet0/1",
+                "destination_node_id": 3,
+                "destination_port_id": 18,
+                "id": 5,
+                "source_node_id": 5,
+                "source_port_id": 34
+            },
+            {
+                "description": "Link from SW1 port 44 to R4 port FastEthernet0/1",
+                "destination_node_id": 4,
+                "destination_port_id": 24,
+                "id": 7,
+                "source_node_id": 5,
+                "source_port_id": 35
+            }
+        ],
+        "nodes": [
+            {
+                "description": "Router c7200",
+                "dynamips_id": 1,
+                "id": 1,
+                "label": {
+                    "color": "#000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "R1",
+                    "x": 20.5,
+                    "y": -25.0
+                },
+                "ports": [
+                    {
+                        "adapter_number": 1,
+                        "id": 1,
+                        "name": "Serial1/0",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 1,
+                        "id": 2,
+                        "name": "Serial1/1",
+                        "port_number": 1
+                    },
+                    {
+                        "adapter_number": 1,
+                        "id": 3,
+                        "name": "Serial1/2",
+                        "port_number": 2
+                    },
+                    {
+                        "adapter_number": 1,
+                        "id": 4,
+                        "name": "Serial1/3",
+                        "port_number": 3
+                    },
+                    {
+                        "adapter_number": 0,
+                        "description": "connected to SW1 on port 1",
+                        "id": 5,
+                        "link_id": 1,
+                        "name": "FastEthernet0/0",
+                        "nio": "NIO_UDP",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 0,
+                        "id": 6,
+                        "name": "FastEthernet0/1",
+                        "port_number": 1
+                    }
+                ],
+                "properties": {
+                    "console": 2001,
+                    "disk0": 0,
+                    "exec_area": 16,
+                    "idlepc": "0x637e3b74",
+                    "image": "C:/Users/humpster/GNS3/Images/IOS/c7200-adventerprisek9-mz.152-4.S5.image",
+                    "mac_addr": "ca01.0950.0000",
+                    "name": "R1",
+                    "nvram": 512,
+                    "private_config": "configs/i1_private-config.cfg",
+                    "slot0": "C7200-IO-2FE",
+                    "slot1": "PA-4T+",
+                    "startup_config": "configs/i1_startup-config.cfg"
+                },
+                "server_id": 1,
+                "type": "C7200",
+                "vm_id": "8ad1db52-175e-4ed9-86c2-ae7553635295",
+                "x": -733.0,
+                "y": -138.0
+            },
+            {
+                "description": "Router c7200",
+                "dynamips_id": 2,
+                "id": 2,
+                "label": {
+                    "color": "#000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "R2",
+                    "x": 20.5,
+                    "y": -25.0
+                },
+                "ports": [
+                    {
+                        "adapter_number": 1,
+                        "id": 7,
+                        "name": "Serial1/0",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 1,
+                        "id": 8,
+                        "name": "Serial1/1",
+                        "port_number": 1
+                    },
+                    {
+                        "adapter_number": 1,
+                        "id": 9,
+                        "name": "Serial1/2",
+                        "port_number": 2
+                    },
+                    {
+                        "adapter_number": 1,
+                        "id": 10,
+                        "name": "Serial1/3",
+                        "port_number": 3
+                    },
+                    {
+                        "adapter_number": 0,
+                        "description": "connected to SW1 on port 2",
+                        "id": 11,
+                        "link_id": 2,
+                        "name": "FastEthernet0/0",
+                        "nio": "NIO_UDP",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 0,
+                        "description": "connected to SW1 on port 22",
+                        "id": 12,
+                        "link_id": 4,
+                        "name": "FastEthernet0/1",
+                        "nio": "NIO_UDP",
+                        "port_number": 1
+                    }
+                ],
+                "properties": {
+                    "console": 2002,
+                    "disk0": 0,
+                    "exec_area": 16,
+                    "idlepc": "0x637e3b74",
+                    "image": "C:/Users/humpster/GNS3/Images/IOS/c7200-adventerprisek9-mz.152-4.S5.image",
+                    "mac_addr": "ca02.1e0c.0000",
+                    "name": "R2",
+                    "nvram": 512,
+                    "private_config": "configs/i2_private-config.cfg",
+                    "slot0": "C7200-IO-2FE",
+                    "slot1": "PA-4T+",
+                    "startup_config": "configs/i2_startup-config.cfg"
+                },
+                "server_id": 1,
+                "type": "C7200",
+                "vm_id": "96255450-ed8a-4896-90bd-fcdc24a18e53",
+                "x": -318.0,
+                "y": -274.0
+            },
+            {
+                "description": "Router c7200",
+                "dynamips_id": 3,
+                "id": 3,
+                "label": {
+                    "color": "#000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "R3",
+                    "x": 20.5,
+                    "y": -25.0
+                },
+                "ports": [
+                    {
+                        "adapter_number": 1,
+                        "id": 13,
+                        "name": "Serial1/0",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 1,
+                        "id": 14,
+                        "name": "Serial1/1",
+                        "port_number": 1
+                    },
+                    {
+                        "adapter_number": 1,
+                        "id": 15,
+                        "name": "Serial1/2",
+                        "port_number": 2
+                    },
+                    {
+                        "adapter_number": 1,
+                        "id": 16,
+                        "name": "Serial1/3",
+                        "port_number": 3
+                    },
+                    {
+                        "adapter_number": 0,
+                        "description": "connected to SW1 on port 3",
+                        "id": 17,
+                        "link_id": 3,
+                        "name": "FastEthernet0/0",
+                        "nio": "NIO_UDP",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 0,
+                        "description": "connected to SW1 on port 33",
+                        "id": 18,
+                        "link_id": 5,
+                        "name": "FastEthernet0/1",
+                        "nio": "NIO_UDP",
+                        "port_number": 1
+                    }
+                ],
+                "properties": {
+                    "console": 2003,
+                    "disk0": 0,
+                    "exec_area": 16,
+                    "idlepc": "0x637e3b74",
+                    "image": "C:/Users/humpster/GNS3/Images/IOS/c7200-adventerprisek9-mz.152-4.S5.image",
+                    "mac_addr": "ca03.16b4.0000",
+                    "name": "R3",
+                    "nvram": 512,
+                    "private_config": "configs/i3_private-config.cfg",
+                    "slot0": "C7200-IO-2FE",
+                    "slot1": "PA-4T+",
+                    "startup_config": "configs/i3_startup-config.cfg"
+                },
+                "server_id": 1,
+                "type": "C7200",
+                "vm_id": "76c2d6f3-a0b3-46df-bcea-25f235714ff8",
+                "x": -318.0,
+                "y": 96.0
+            },
+            {
+                "description": "Router c7200",
+                "dynamips_id": 4,
+                "id": 4,
+                "label": {
+                    "color": "#000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "R4",
+                    "x": 20.5,
+                    "y": -25.0
+                },
+                "ports": [
+                    {
+                        "adapter_number": 1,
+                        "id": 19,
+                        "name": "Serial1/0",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 1,
+                        "id": 20,
+                        "name": "Serial1/1",
+                        "port_number": 1
+                    },
+                    {
+                        "adapter_number": 1,
+                        "id": 21,
+                        "name": "Serial1/2",
+                        "port_number": 2
+                    },
+                    {
+                        "adapter_number": 1,
+                        "id": 22,
+                        "name": "Serial1/3",
+                        "port_number": 3
+                    },
+                    {
+                        "adapter_number": 0,
+                        "id": 23,
+                        "name": "FastEthernet0/0",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 0,
+                        "description": "connected to SW1 on port 44",
+                        "id": 24,
+                        "link_id": 7,
+                        "name": "FastEthernet0/1",
+                        "nio": "NIO_UDP",
+                        "port_number": 1
+                    }
+                ],
+                "properties": {
+                    "console": 2004,
+                    "disk0": 0,
+                    "exec_area": 16,
+                    "idlepc": "0x637e3b74",
+                    "image": "C:/Users/humpster/GNS3/Images/IOS/c7200-adventerprisek9-mz.152-4.S5.image",
+                    "mac_addr": "ca04.037c.0000",
+                    "name": "R4",
+                    "nvram": 512,
+                    "private_config": "configs/i4_private-config.cfg",
+                    "slot0": "C7200-IO-2FE",
+                    "slot1": "PA-4T+",
+                    "startup_config": "configs/i4_startup-config.cfg"
+                },
+                "server_id": 1,
+                "type": "C7200",
+                "vm_id": "51a12ce6-db35-4597-93ad-3e82db8d5de1",
+                "x": 149.0,
+                "y": -127.0
+            },
+            {
+                "description": "Ethernet switch",
+                "device_id": "fe6d600d-d563-4287-8cc9-3d0e4c340c33",
+                "id": 5,
+                "label": {
+                    "color": "#000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "SW1",
+                    "x": 17.0,
+                    "y": -25.0
+                },
+                "ports": [
+                    {
+                        "description": "connected to R1 on port FastEthernet0/0",
+                        "id": 25,
+                        "link_id": 1,
+                        "name": "1",
+                        "nio": "NIO_UDP",
+                        "port_number": 1,
+                        "type": "access",
+                        "vlan": 1
+                    },
+                    {
+                        "description": "connected to R2 on port FastEthernet0/0",
+                        "id": 26,
+                        "link_id": 2,
+                        "name": "2",
+                        "nio": "NIO_UDP",
+                        "port_number": 2,
+                        "type": "access",
+                        "vlan": 1
+                    },
+                    {
+                        "description": "connected to R3 on port FastEthernet0/0",
+                        "id": 27,
+                        "link_id": 3,
+                        "name": "3",
+                        "nio": "NIO_UDP",
+                        "port_number": 3,
+                        "type": "access",
+                        "vlan": 1
+                    },
+                    {
+                        "description": "connected to R2 on port FastEthernet0/1",
+                        "id": 33,
+                        "link_id": 4,
+                        "name": "22",
+                        "nio": "NIO_UDP",
+                        "port_number": 22,
+                        "type": "access",
+                        "vlan": 2
+                    },
+                    {
+                        "description": "connected to R3 on port FastEthernet0/1",
+                        "id": 34,
+                        "link_id": 5,
+                        "name": "33",
+                        "nio": "NIO_UDP",
+                        "port_number": 33,
+                        "type": "access",
+                        "vlan": 2
+                    },
+                    {
+                        "description": "connected to R4 on port FastEthernet0/1",
+                        "id": 35,
+                        "link_id": 7,
+                        "name": "44",
+                        "nio": "NIO_UDP",
+                        "port_number": 44,
+                        "type": "access",
+                        "vlan": 2
+                    }
+                ],
+                "properties": {
+                    "name": "SW1"
+                },
+                "server_id": 1,
+                "type": "EthernetSwitch",
+                "x": -350.5,
+                "y": -111.0
+            }
+        ],
+        "servers": [
+            {
+                "cloud": false,
+                "host": "127.0.0.1",
+                "id": 1,
+                "local": true,
+                "port": 8000
+            }
+        ]
+    },
+    "type": "topology",
+    "version": "1.3.2"
+}
